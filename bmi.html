@@ -1,0 +1,297 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="bmi.css">
+        <style>
+            body{
+    background-color:#EBEAFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.e{
+    overflow: hidden;
+    width: 100%;
+    height: 120vh;
+}
+.container{
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #9694FF;
+    border-radius: 50px;
+    text-align: center;
+}
+h1{
+color: #333;
+}
+.input-conta{
+    
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 18px;
+   
+    
+
+}
+input[type="number"]{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button{
+    background-color: #3D3BF3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 12px;
+
+}
+#result{
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+#result1{
+   text-align: left;
+}
+#result2{
+   text-align: left;
+}
+.nex{
+    text-align: center;
+    padding: 10px;
+}
+.so{
+    text-align: center;
+    padding: 10px;
+}
+
+        </style>
+
+    </head>
+    <body>
+        <div class="nex">
+            <h1> BMISystem Group </h1>
+        </div>
+<section class="E">
+        <div class="container">
+            <h1>BMI</h1>
+            <div class="input-conta">
+                <label for="height">កម្ពស់</label>
+                <input type="number" id="height" placeholder="កម្ពស់ (cm)">
+            
+            <div class="container">
+                <div class="input-conta">
+                    <label for="weight">ទម្ងន់</label>
+                    <input type="number" id="weight" placeholder="ទម្ងន់ (kg)">
+        </div>
+
+        <button onclick="calculateBMI()">Calculate</button>
+        <div id="result"></div>
+        <div id="result2"></div>
+        <div id="result1"></div>
+        
+        
+        
+
+        
+
+        <script >
+            function calculateBMI(){
+                var heightInput = document.getElementById("height");
+                var weightInput = document.getElementById("weight");
+                var resultDIv = document.getElementById("result");
+                var result1DIv = document.getElementById("result1");                
+                var result2DIv = document.getElementById("result2");
+                
+
+                var height = parseFloat(heightInput.value);
+                var weight = parseFloat(weightInput.value);
+                 if (isNaN(height) || isNaN(weight)){
+                    resultDIv.innerHTML = "សូមបញ្ចូលកម្ពស់ និងទម្ងន់ត្រឹមត្រូវ។";
+                    return;
+                 }
+                 var bmi = weight / (( height / 100) ** 2);
+                 var category ="";
+                 if (bmi < 18.5){
+                    category = "ទម្ងន់ក្រោម";
+                 }else if (bmi < 25) { 
+                    category = "ទម្ងន់ធម្មតា"; 
+                 }else if (bmi < 30) { 
+                    category = "លើសទម្ងន់"; 
+                 }else {
+                    category = "ធាត់"
+                 }
+                 var h=height;
+                 var category1="";
+
+                 if (h==145){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 34kg-42kg";
+                 }
+                 else if (h==146){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 34kg-42kg";
+                 }
+                 else if (h==147){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 36-44 kg";
+                 } else if (h==148){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 36-44 kg";
+                 } else if (h==149){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 36-44 kg";
+                 }
+                 else if (h==150){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 36-44 kg";
+                 }else if (h==151){
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 44-58 kg";
+                 }
+                 else if (h==152) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 44-58 kg"; 
+                 }    
+                  else if (h==153) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 44-58 kg"; 
+                 } 
+                     else if (h==154) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 44-58 kg"; 
+                 }   
+                   else if (h==155) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 44-58 kg"; 
+                 }
+                 else if (h==156) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 47-61 kg"; 
+                 }
+                 else if (h==157) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 47-61 kg"; 
+                 }else if (h==158) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 47-61 kg"; 
+                 }
+                 else if (h==159) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 47-61 kg"; 
+                 }
+                 else if (h==160) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 47-61 kg"; 
+                 }
+                 else if (h==161) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 50-65 kg"; 
+                 }
+                 else if (h==162) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 50-65 kg"; 
+                 }
+                 else if (h==163) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 50-65 kg"; 
+                 }
+                 else if (h==164) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 50-65 kg"; 
+                 }
+                 else if (h==165) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 50-65 kg"; 
+                 }
+                 else if (h==166) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 52-62 kg"; 
+                 }else if (h==167) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 52-62 kg"; 
+                 }
+                 else if (h==168) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 54–69 kg"; 
+                 }
+                 else if (h==169) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 54–69 kg"; 
+                 }
+                 else if (h==170) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 54–69 kg"; 
+                 }
+                 else if (h==171) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 54–70 kg"; 
+                 }else if (h==172) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 54–70 kg"; 
+                 }
+                 else if (h==173) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 57–74 kg"; 
+                 }
+                 else if (h==174) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 57–74 kg"; 
+                 }
+                 else if (h==175) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 57–74 kg"; 
+                 }
+                 else if (h==176) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 59–75 kg"; 
+                 }
+                 else if (h==177) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 59–75 kg"; 
+                 }
+                 else if (h==178) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 60–78 kg"; 
+                 }
+                 else if (h==179) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 60–78 kg"; 
+                 }else if (h==180) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 60–78 kg"; 
+                 }
+                 else if (h==181) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 62–80 kg"; 
+                 }
+                 else if (h==182) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 62–80 kg"; 
+                 }
+                 else if (h==183) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 64–83 kg"; 
+                 }
+                 else if (h==184) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 64–83 kg"; 
+                 } 
+                 else if (h==185) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 64–83 kg"; 
+                 }  
+                 else if (h==186) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 65–85 kg"; 
+                 } 
+                 else if (h==187) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 65–85 kg"; 
+                 }     
+                  else if (h==188) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 67–87 kg"; 
+                 }
+                 else if (h==189) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 67–87 kg"; 
+                 }
+                 else if (h==190) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 67–87 kg"; 
+                 }
+                 else if (h==191) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 70–88 kg"; 
+                 }
+                 else if (h==192) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 70–88 kg"; 
+                 }
+                 else if (h==193) { 
+                    category1 = "ទម្ងន់ដែលមានសុខភាពល្អសម្រាប់កម្ពស់ 71–89 kg"; 
+                 }
+                 else  { 
+                    category1 = "គ្មានកំម្រិតទម្ងន់នេះក្នុងប្រព័ន្ធ"; 
+                 }
+
+                 resultDIv.innerHTML = "BMI របស់អ្នកគឺ" + bmi.toFixed(2) + " (" + category +")";
+                 result1DIv.innerHTML = "កម្ពស់របស់អ្នកគឺ" + h.toFixed(2) +"cm"+ " (" + category1 +")";  
+                 result2DIv.innerHTML = "BMI ដែលមានសុខភាពល្អ : 18.5 kg/m2 - 25 kg/m2" ;  
+                   }
+        </script>
+            </div>
+            </div>
+            </div>
+            <div class="so">
+                <h1>ឈ្មោះសមាជិតក្រុម</h1>
+                <p>នួន នរា</p>
+                <p>នួន ណារ៉ា</p>
+            </div>
+        </section>
+
+
+            
+            
+    </body>
+   
+
+</html>
