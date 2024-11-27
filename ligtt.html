@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(65, 152, 152);
+                min-height: 100vh;
+            }
+            .con
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px ;
+            flex-wrap: wrap;
+            position: 40px 0;
+        }
+        .con .card
+        {
+            position: relative;
+            width: 320px;
+            height: 440px;
+            box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                         inset -5px -5px -5px rgba(255,255,255,0.5),
+                          5px 5px 5px rgba(0, 0, 0, 0.05),
+                          -5px -5px -5px rgba(255,255,255,0.5);
+             border-radius: 15px;
+            margin: 30px;
+
+        }
+        .con .card .box
+        {
+            position: absolute;
+                top: 20px;
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                background: #ebf5fc;
+                border-radius: 15px;
+                box-shadow: 0 10px 20px rgb(0, 0, 0 ,0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+        }
+        .con .card:hover .box
+        {
+            transform: translateX(-50px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(45deg, #070707,rgb(185, 10, 121),black);
+
+        }
+        .con .card .box .conter
+        {
+            padding: 20px;
+            text-align: center;
+
+        }
+        .con .card:hover .box .conter h3,
+        .con .card:hover .box .conter p
+        {
+            color: #2c2323;
+
+        }
+        .con .card .box .conter h1
+        {
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            font-size: 8em;
+            color: rgba(0, 0,0, 0.5);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .con .card:hover .box .conter h1
+        {
+            color: rgba(0, 0, 0, 0.05);
+
+        }
+        .con .card .box .conter h3
+        {
+            font-size: 1.8em;
+            color: #777;
+            z-index: 1;
+            transition: 0.5s;
+        
+        }
+        .con .card .box .conter p
+        {
+            font-size: 1em;
+            font-weight: 300;
+            color: #777;
+            z-index: 1;
+            transition: 0.5s;
+        }
+        .con .card .box .conter a
+        {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgb(13, 120, 122);
+            margin-top: 15px ;
+            border-radius: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        }
+        .con .card:hover .box .conter a
+        {
+            background: fuchsia;
+        }
+      
+
+        </style>
+    </head>
+    <body>
+        <div class="con">
+            <div class="card">
+                <div class="box">
+                    <div class="conter">
+                        <h1>01</h1>
+                        <h3>card One</h3>
+                        <p>មុននឹងធ្វើការសម្រេចចិត្តថា	តើត្រូវរៀបចំចាត់ចែងប្រតិបត្តិការយ៉ាងណានោះនាអនាគតសហគិនចាំបាច់ត្រូវកំណត់ឲ្យប្រាកដពីទម្រង់ស្របច្បាប់នៃតម្រូវការរបស់អាជីវកម្ម មួយដែលប្រថុយ ប្រថាន។ 
+                       
+                        </p>
+                        <a href="#">rerrxf</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="conter">
+                        <h1>01</h1>
+                        <h3>card One</h3>
+                        <p>មុននឹងធ្វើការសម្រេចចិត្តថា	តើត្រូវរៀបចំចាត់ចែងប្រតិបត្តិការយ៉ាងណានោះនាអនាគតសហគិនចាំបាច់ត្រូវកំណត់ឲ្យប្រាកដពីទម្រង់ស្របច្បាប់នៃតម្រូវការរបស់អាជីវកម្ម មួយដែលប្រថុយ ប្រថាន។ 
+                       
+                        </p>
+                        <a href="#">rerrxf</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
